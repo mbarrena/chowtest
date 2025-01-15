@@ -20,7 +20,7 @@ def linear_residuals(X, y):
     
     # creates a dataframe with the predicted y in a column called y_hat
     summary_result = pd.DataFrame(columns = ['y_hat'])
-    yhat_list = [float(i[0]) for i in np.ndarray.tolist(model.predict(X))]
+    yhat_list = [float(i) for i in np.ndarray.tolist(model.predict(X))]
     summary_result['y_hat'] = yhat_list  
     # saves the actual y values in the y_actual column
     summary_result['y_actual'] = y.values
